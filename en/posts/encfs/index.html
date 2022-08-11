@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Basically there exist two main principle of encrypt files or directories.
+ File-system Level Encryption: Encrypt a disk partition or a special (big) file which can be decrypted by the OS and be mounted. File Encryption: Encrypt each file separately.  By the File-system Level Encryption a change in the decrypted (mounted partition) may affect a big change in the encrypted data. If you want to backup the encrypted data in a cloud service, you&amp;rsquo;ve got by every change a big network traffic." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://digitalizeit-gmbh.github.io/en/posts/encfs/" />
+
+
+    <title>
+        
+            Filesystem encryption with encfs :: DigitalizeIT GmbH  — We support you in the technical implementation of your ideas.
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.b1fb78ae06da75890d2caea9cc8522d849a6b78db1ac1168b7cf07352cb2e7f2.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Filesystem encryption with encfs">
+<meta itemprop="description" content="Basically there exist two main principle of encrypt files or directories.
+ File-system Level Encryption: Encrypt a disk partition or a special (big) file which can be decrypted by the OS and be mounted. File Encryption: Encrypt each file separately.  By the File-system Level Encryption a change in the decrypted (mounted partition) may affect a big change in the encrypted data. If you want to backup the encrypted data in a cloud service, you&rsquo;ve got by every change a big network traffic.">
+<meta itemprop="datePublished" content="2020-08-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="334">
+<meta itemprop="image" content="https://digitalizeit-gmbh.github.io"/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://digitalizeit-gmbh.github.io"/>
+
+<meta name="twitter:title" content="Filesystem encryption with encfs"/>
+<meta name="twitter:description" content="Basically there exist two main principle of encrypt files or directories.
+ File-system Level Encryption: Encrypt a disk partition or a special (big) file which can be decrypted by the OS and be mounted. File Encryption: Encrypt each file separately.  By the File-system Level Encryption a change in the decrypted (mounted partition) may affect a big change in the encrypted data. If you want to backup the encrypted data in a cloud service, you&rsquo;ve got by every change a big network traffic."/>
+
+
+
+    <meta property="og:title" content="Filesystem encryption with encfs" />
+<meta property="og:description" content="Basically there exist two main principle of encrypt files or directories.
+ File-system Level Encryption: Encrypt a disk partition or a special (big) file which can be decrypted by the OS and be mounted. File Encryption: Encrypt each file separately.  By the File-system Level Encryption a change in the decrypted (mounted partition) may affect a big change in the encrypted data. If you want to backup the encrypted data in a cloud service, you&rsquo;ve got by every change a big network traffic." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://digitalizeit-gmbh.github.io/en/posts/encfs/" />
+<meta property="og:image" content="https://digitalizeit-gmbh.github.io"/>
+<meta property="article:published_time" content="2020-08-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-28T00:00:00+00:00" /><meta property="og:site_name" content="DigitalizeIT GmbH" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-08-28 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Home:</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#a9a9b3;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right" style="white-space: nowrap;">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://digitalizeit-gmbh.github.io/en/services">Services</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/trainings/">Trainings</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/about/">About</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/posts/">Blog</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/credentials/">Credentials</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+            <span >
+
+<ul class="menu__inner">
+
+
+<li><a href="https://digitalizeit-gmbh.github.io/de/posts/encfs/"><span class="flag flag-icon flag-icon-us flag-icon"></span></a></li>
+
+
+
+</ul></span>
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+        <h1>Filesystem encryption with encfs</h1>
+        
+        <article>
+            
+
+            
+
+            
+
+            <div class="post-content">
+                <p>Basically there exist two main principle of encrypt files or directories.</p>
+<ol>
+<li>File-system Level Encryption: Encrypt a disk partition or a special (big) file which can be decrypted by the OS and be mounted.</li>
+<li>File Encryption: Encrypt each file separately.</li>
+</ol>
+<p>By the File-system Level Encryption a change in the decrypted (mounted partition) may affect a big change in the encrypted data. If you want to backup the encrypted data in a cloud service, you&rsquo;ve got by every change a big network traffic. By the File Encryption the encrypted data is almost the same size as the content of the decrypted file. This is more useful if you but that data on a cloud service (which you may not trust).</p>
+<h2 id="setup-file-encryption">Setup File Encryption</h2>
+<p>On Linux you can do File Encryption with Encfs.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install encfs
+</code></pre></div><p>Init a base directory. In that directory create two sub-directories.</p>
+<ul>
+<li>crypt: will contain the encrypted data.</li>
+<li>plain: will contain the plain decrypted data</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir crypt plain
+</code></pre></div><p>Create a mount script. Encfs requires absolute paths.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># mount-crypt.sh</span>
+<span style="color:#75715e">#!/bin/bash</span>
+CRYPT_DIR<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span>/crypt 
+PLAIN_DIR<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span>/plain 
+encfs $CRYPT_DIR $PLAIN_DIR
+
+<span style="color:#75715e"># umount-crypt.sh</span>
+<span style="color:#75715e">#!/bin/bash</span>
+sudo umount plain 
+
+<span style="color:#75715e"># Save that scripts and make them executable</span>
+chmod u+x mount-crypt.sh.sh
+chmod u+x umount-crypt.sh.sh
+</code></pre></div><p>Run the script. If you run it the first time you will be prompted which option you want to use. I recommend the option &ldquo;p&rdquo; for paranoia. After that you have to enter twice the initial password. Use a good one. And don&rsquo;t forget it!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./mount.sh
+</code></pre></div><p>In the &ldquo;crypt&rdquo; directory there should be now a hidden file &ldquo;.encfs6.xml&rdquo;. If you run the &ldquo;mount&rdquo; command you should see an entry which starts with &ldquo;encfs &hellip;&rdquo;.</p>
+<h2 id="work-with-encfs">Work with encfs</h2>
+<p>To mount the encrypted files just run the command mount.sh</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./mount-crypt.sh
+</code></pre></div><p>To umount the mounted plain directory you need root rights.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./umount-crypt.sh
+</code></pre></div><p>If you have mounted the encrypted files you can work in the plain directory as usual. If you&rsquo;re finish with the work just unmount it. Have a look how it looks on the filesystem in a mounted state.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div >
+            <span>DigitalizeIT GmbH</span><br />
+            <span>Holzgasse 49, 3322 Urtenen-Schönbühl, CH</span><br />
+            <a href = "mailto: info@digitalizeIT.io">info@digitalizeIT.io</a><br />
+            <a href="tel:&#43;41%2078%20811%2003%2033">&#43;41 78 811 03 33</a>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-151915982-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+    </body>
+</html>

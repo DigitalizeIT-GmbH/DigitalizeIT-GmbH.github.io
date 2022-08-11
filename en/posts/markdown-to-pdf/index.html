@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Introduction Goal Convert md (Markdown) files to a presentation.
+By using pandoc.
+Pandoc is a very powerful tool and can convert almost any document format to another document format.
+For all options run pandc --help or checkout Pandoc User&amp;rsquo;s Guide
+Setup On Debian/Ubuntu based distributions install following software
+sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
+Basic To simply convert an md file run:" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://digitalizeit-gmbh.github.io/en/posts/markdown-to-pdf/" />
+
+
+    <title>
+        
+            Convert Markdown files to PDF :: DigitalizeIT GmbH  — We support you in the technical implementation of your ideas.
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.b1fb78ae06da75890d2caea9cc8522d849a6b78db1ac1168b7cf07352cb2e7f2.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Convert Markdown files to PDF">
+<meta itemprop="description" content="Introduction Goal Convert md (Markdown) files to a presentation.
+By using pandoc.
+Pandoc is a very powerful tool and can convert almost any document format to another document format.
+For all options run pandc --help or checkout Pandoc User&rsquo;s Guide
+Setup On Debian/Ubuntu based distributions install following software
+sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
+Basic To simply convert an md file run:">
+<meta itemprop="datePublished" content="2020-11-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-11-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="427">
+<meta itemprop="image" content="https://digitalizeit-gmbh.github.io"/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://digitalizeit-gmbh.github.io"/>
+
+<meta name="twitter:title" content="Convert Markdown files to PDF"/>
+<meta name="twitter:description" content="Introduction Goal Convert md (Markdown) files to a presentation.
+By using pandoc.
+Pandoc is a very powerful tool and can convert almost any document format to another document format.
+For all options run pandc --help or checkout Pandoc User&rsquo;s Guide
+Setup On Debian/Ubuntu based distributions install following software
+sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
+Basic To simply convert an md file run:"/>
+
+
+
+    <meta property="og:title" content="Convert Markdown files to PDF" />
+<meta property="og:description" content="Introduction Goal Convert md (Markdown) files to a presentation.
+By using pandoc.
+Pandoc is a very powerful tool and can convert almost any document format to another document format.
+For all options run pandc --help or checkout Pandoc User&rsquo;s Guide
+Setup On Debian/Ubuntu based distributions install following software
+sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
+Basic To simply convert an md file run:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://digitalizeit-gmbh.github.io/en/posts/markdown-to-pdf/" />
+<meta property="og:image" content="https://digitalizeit-gmbh.github.io"/>
+<meta property="article:published_time" content="2020-11-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-04T00:00:00+00:00" /><meta property="og:site_name" content="DigitalizeIT GmbH" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-11-04 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Home:</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#a9a9b3;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right" style="white-space: nowrap;">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://digitalizeit-gmbh.github.io/en/services">Services</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/trainings/">Trainings</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/about/">About</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/posts/">Blog</a></li><li><a href="https://digitalizeit-gmbh.github.io/en/credentials/">Credentials</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+            <span >
+
+<ul class="menu__inner">
+
+
+<li><a href="https://digitalizeit-gmbh.github.io/de/posts/markdown-to-pdf/"><span class="flag flag-icon flag-icon-us flag-icon"></span></a></li>
+
+
+
+</ul></span>
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+        <h1>Convert Markdown files to PDF</h1>
+        
+        <article>
+            
+
+            
+
+            
+
+            <div class="post-content">
+                <h2 id="introduction">Introduction</h2>
+<p><strong>Goal</strong> Convert <code>md</code> (Markdown) files to a presentation.</p>
+<p>By using <code>pandoc</code>.</p>
+<p>Pandoc is a very powerful tool and can convert almost any document format to another document
+format.</p>
+<p>For all options run <code>pandc --help</code> or checkout <a href="https://pandoc.org/MANUAL.html">Pandoc User&rsquo;s Guide</a></p>
+<h2 id="setup">Setup</h2>
+<p>On Debian/Ubuntu based distributions install following software</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install pandoc
+sudo apt-get install texlive-latex-base
+</code></pre></div><p>If there should be missing software search in google for it.</p>
+<h2 id="basic">Basic</h2>
+<p>To simply convert an <code>md</code> file run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf
+</code></pre></div><h2 id="advanced">Advanced</h2>
+<p>To generate a more beautiful presentation add metadata.</p>
+<p>This can be done in the <code>md</code> file itself with a yaml block at the beginning</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---
+title:
+- Mardown to Presentation
+author:
+- DigitalizeIT GmbH
+theme:
+- Copenhagen
+---
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf
+</code></pre></div><p>List with all <a href="https://deic-web.uab.cat/~iblanes/beamer_gallery/index_by_theme_and_color.html">themes</a></p>
+<h2 id="using-a-template-file">Using a template file</h2>
+<p>Modify the <code>md</code> with specific pandoc metadata is not always what you want. We can put all these metadata to a template file. E.g. <code>template.yaml</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml
+</code></pre></div><h2 id="code-block-highlighting">Code block highlighting</h2>
+<p>There are several code highlighting styles available:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc --list-highlight-styles
+</code></pre></div><p>An example by using the <code>zenbrun</code> style</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
+</code></pre></div><h2 id="generate-other-document-types">Generate other document types</h2>
+<p>There are almost 50 output formats available. To list them:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc --list-output-formats
+</code></pre></div><p>Be aware that every generator has it&rsquo;s own options. For example the <code>theme</code> option in the <code>template.yaml</code> is only available in the <code>beamer</code> generator.</p>
+<h2 id="generate-a-pdf-document">Generate a PDF document</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t latex -o presentation.pdf <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn -V geometry:a4paper
+</code></pre></div><h2 id="generate-html">Generate HTML</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t html5 -o presentation.html <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
+</code></pre></div><p>If you analyze the generated HTML code all HTML tags have specific <code>class</code> attributes. So it&rsquo;s straight forward to generate a custom <code>css</code>.</p>
+<h2 id="generate-microsoft-office-documents">Generate Microsoft Office documents</h2>
+<p>Unfortunately <code>docx</code> and <code>pptx</code> have no templates available.</p>
+<h3 id="generate-a-powerpoint">Generate a PowerPoint</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t pptx -o presentation.pptx <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
+</code></pre></div><h3 id="generate-a-word-document">Generate a word document</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t docx -o presentation.docx <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<h3 id="cons">Cons</h3>
+<p>Pandoc is in my opinion not a replacement for professional PowerPoint presentation or word documents.</p>
+<h3 id="pro">Pro</h3>
+<p>Pandoc is a powerful tool to generate documents based out of Markdown files. Especial to document a software project. It can be easily integrated into a CI/CD pipeline and the documentation will be released at the same time as the software.</p>
+<h3 id="hints">Hints</h3>
+<p>If you want to transform the Markdown be aware of it when writing. Especial the code snippets will not have a word wrap in the most cases. When generating a presentation (e.g. beamer). Be aware of the size of each slide&hellip;</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div >
+            <span>DigitalizeIT GmbH</span><br />
+            <span>Holzgasse 49, 3322 Urtenen-Schönbühl, CH</span><br />
+            <a href = "mailto: info@digitalizeIT.io">info@digitalizeIT.io</a><br />
+            <a href="tel:&#43;41%2078%20811%2003%2033">&#43;41 78 811 03 33</a>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-151915982-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+    </body>
+</html>

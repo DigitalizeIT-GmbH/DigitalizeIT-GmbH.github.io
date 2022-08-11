@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Goal: Setup the RASPBERRY PI 4 as VPN server. Clients can establish a secure VPN tunnel to the VPN server. Clients then have internet access through the VPN tunnel.
+Setup:
+ Hardware: RASPBERRY PI 4 4G Model B (Cortex-A72) OS: Raspbian Buster Lite (2019-07-10)  Install WireGuard sudo apt-get update sudo apt-get upgrade sudo apt-get install raspberrypi-kernel-headers sudo apt-get install libmnl-dev libelf-dev build-essential pkg-config sudo reboot wget https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190702.tar.xz tar xf WireGuard-0." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://digitalizeit-gmbh.github.io/posts/raspberrypivpnserver/" />
+
+
+    <title>
+        
+            RASPBERRY PI 4 as WireGuard VPN server :: DigitalizeIT GmbH  — We support you in the technical implementation of your ideas.
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.b1fb78ae06da75890d2caea9cc8522d849a6b78db1ac1168b7cf07352cb2e7f2.css">
+
+
+
+
+
+
+<meta itemprop="name" content="RASPBERRY PI 4 as WireGuard VPN server">
+<meta itemprop="description" content="Goal: Setup the RASPBERRY PI 4 as VPN server. Clients can establish a secure VPN tunnel to the VPN server. Clients then have internet access through the VPN tunnel.
+Setup:
+ Hardware: RASPBERRY PI 4 4G Model B (Cortex-A72) OS: Raspbian Buster Lite (2019-07-10)  Install WireGuard sudo apt-get update sudo apt-get upgrade sudo apt-get install raspberrypi-kernel-headers sudo apt-get install libmnl-dev libelf-dev build-essential pkg-config sudo reboot wget https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190702.tar.xz tar xf WireGuard-0.">
+<meta itemprop="datePublished" content="2019-08-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-08-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="335">
+<meta itemprop="image" content="https://digitalizeit-gmbh.github.io"/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://digitalizeit-gmbh.github.io"/>
+
+<meta name="twitter:title" content="RASPBERRY PI 4 as WireGuard VPN server"/>
+<meta name="twitter:description" content="Goal: Setup the RASPBERRY PI 4 as VPN server. Clients can establish a secure VPN tunnel to the VPN server. Clients then have internet access through the VPN tunnel.
+Setup:
+ Hardware: RASPBERRY PI 4 4G Model B (Cortex-A72) OS: Raspbian Buster Lite (2019-07-10)  Install WireGuard sudo apt-get update sudo apt-get upgrade sudo apt-get install raspberrypi-kernel-headers sudo apt-get install libmnl-dev libelf-dev build-essential pkg-config sudo reboot wget https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190702.tar.xz tar xf WireGuard-0."/>
+
+
+
+    <meta property="og:title" content="RASPBERRY PI 4 as WireGuard VPN server" />
+<meta property="og:description" content="Goal: Setup the RASPBERRY PI 4 as VPN server. Clients can establish a secure VPN tunnel to the VPN server. Clients then have internet access through the VPN tunnel.
+Setup:
+ Hardware: RASPBERRY PI 4 4G Model B (Cortex-A72) OS: Raspbian Buster Lite (2019-07-10)  Install WireGuard sudo apt-get update sudo apt-get upgrade sudo apt-get install raspberrypi-kernel-headers sudo apt-get install libmnl-dev libelf-dev build-essential pkg-config sudo reboot wget https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190702.tar.xz tar xf WireGuard-0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://digitalizeit-gmbh.github.io/posts/raspberrypivpnserver/" />
+<meta property="og:image" content="https://digitalizeit-gmbh.github.io"/>
+<meta property="article:published_time" content="2019-08-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-01T00:00:00+00:00" /><meta property="og:site_name" content="DigitalizeIT GmbH" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2019-08-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Home:</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#a9a9b3;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right" style="white-space: nowrap;">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://digitalizeit-gmbh.github.io/services">Services</a></li><li><a href="https://digitalizeit-gmbh.github.io/trainings/">Trainings</a></li><li><a href="https://digitalizeit-gmbh.github.io/about/">About</a></li><li><a href="https://digitalizeit-gmbh.github.io/posts/">Blog</a></li><li><a href="https://digitalizeit-gmbh.github.io/credentials/">Credentials</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+            <span >
+
+<ul class="menu__inner">
+
+
+</ul></span>
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+        <h1>RASPBERRY PI 4 as WireGuard VPN server</h1>
+        
+        <article>
+            
+
+            
+
+            
+
+            <div class="post-content">
+                <p>Goal: Setup the RASPBERRY PI 4 as VPN server. Clients can establish a secure VPN tunnel to the VPN server. Clients then have internet access through the VPN tunnel.</p>
+<p>Setup:</p>
+<ul>
+<li>Hardware: RASPBERRY PI 4 4G Model B (Cortex-A72)</li>
+<li>OS: Raspbian Buster Lite (2019-07-10)</li>
+</ul>
+<h2 id="install-wireguard">Install WireGuard</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install raspberrypi-kernel-headers
+sudo apt-get install libmnl-dev libelf-dev build-essential pkg-config
+sudo reboot
+
+wget https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20190702.tar.xz
+tar xf WireGuard-0.0.20190702.tar.xz
+cd WireGuard-0.0.20190702/src
+make
+sudo make install
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Enable IP Forwarding</span>
+<span style="color:#75715e"># /etc/sysctl.conf set: net.ipv4.ip_forward = 1</span>
+sudo perl -pi -e <span style="color:#e6db74">&#39;s/#{1,}?net.ipv4.ip_forward ?= ?(0|1)/net.ipv4.ip_forward = 1/g&#39;</span> /etc/sysctl.conf
+sudo reboot
+
+<span style="color:#75715e"># Validate config change. Expected result: net.ipv4.ip_forward = 1</span>
+sysctl net.ipv4.ip_forward
+</code></pre></div><h2 id="generate-private-and-public-keys-for-server-and-client1">Generate private and public keys for server and client1</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir wgkeys
+cd wgkeys
+
+<span style="color:#75715e"># Server Key-pair</span>
+wg genkey &gt; server_private.key
+wg pubkey &gt; server_public.key &lt; server_private.key
+
+<span style="color:#75715e"># Client1 Key-pair</span>
+wg genkey &gt; client1_private.key
+wg pubkey &gt; client1_public.key &lt; client1_private.key
+</code></pre></div><h2 id="vpn-server-configuration">VPN Server Configuration</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/wireguard/wg0.conf
+
+<span style="color:#75715e"># Edit file content</span>
+<span style="color:#f92672">[</span>Interface<span style="color:#f92672">]</span>
+Address <span style="color:#f92672">=</span> 10.200.200.1/24
+SaveConfig <span style="color:#f92672">=</span> true
+ListenPort <span style="color:#f92672">=</span> <span style="color:#ae81ff">51820</span>
+PrivateKey <span style="color:#f92672">=</span> &lt;server private key&gt;
+
+<span style="color:#75715e"># note - substitute eth0 in the following lines to match the Internet-facing interface</span>
+PostUp <span style="color:#f92672">=</span> iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown <span style="color:#f92672">=</span> iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+<span style="color:#f92672">[</span>Peer<span style="color:#f92672">]</span>
+<span style="color:#75715e"># client1</span>
+PublicKey <span style="color:#f92672">=</span> &lt;Client public key&gt;
+AllowedIPs <span style="color:#f92672">=</span> 10.200.200.2/32
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Start</span>
+sudo wg-quick up wg0
+<span style="color:#75715e"># Validating</span>
+sudo wg
+
+<span style="color:#75715e"># Automatically start at startup</span>
+sudo systemctl enable wg-quick@wg0
+</code></pre></div><h2 id="vpn-client-configuration">VPN Client Configuration</h2>
+<p>For the most operation systems the installation of WireGuard is stright forward: <a href="https://www.wireguard.com/install/">https://www.wireguard.com/install/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/wireguard/wg0-client.conf
+
+<span style="color:#75715e"># File content</span>
+<span style="color:#f92672">[</span>Interface<span style="color:#f92672">]</span>
+Address <span style="color:#f92672">=</span> 10.200.200.2/24
+PrivateKey <span style="color:#f92672">=</span> &lt;client private key&gt;
+<span style="color:#75715e"># DNS = 10.200.200.1</span>
+
+<span style="color:#f92672">[</span>Peer<span style="color:#f92672">]</span>
+PublicKey <span style="color:#f92672">=</span> &lt;server public key&gt;
+AllowedIPs <span style="color:#f92672">=</span> 0.0.0.0/0, ::/0
+Endpoint <span style="color:#f92672">=</span> &lt;VPN server IP&gt;:51820
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Connect to the VPN server</span>
+sudo wg-quick up wg0-client
+</code></pre></div><p>Hint: Androids <code>WireGuard</code> app can import a wireguard configuration over QR code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qrencode -t ASCIIi -r wg0-client.conf
+</code></pre></div><h2 id="inspiration">Inspiration</h2>
+<p>Inspired by:</p>
+<ul>
+<li><a href="https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/">https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/</a></li>
+<li><a href="https://github.com/adrianmihalko/raspberrypiwireguard">https://github.com/adrianmihalko/raspberrypiwireguard</a></li>
+<li><a href="https://www.wireguard.com/install/">https://www.wireguard.com/install/</a></li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div >
+            <span>DigitalizeIT GmbH</span><br />
+            <span>Holzgasse 49, 3322 Urtenen-Schönbühl, CH</span><br />
+            <a href = "mailto: info@digitalizeIT.io">info@digitalizeIT.io</a><br />
+            <a href="tel:&#43;41%2078%20811%2003%2033">&#43;41 78 811 03 33</a>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-151915982-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+    </body>
+</html>

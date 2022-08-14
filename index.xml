@@ -46,7 +46,7 @@ Goals:
       <description>Introduction Goal Convert md (Markdown) files to a presentation.
 By using pandoc.
 Pandoc is a very powerful tool and can convert almost any document format to another document format.
-For all options run pandc --help or checkout Pandoc User&amp;rsquo;s Guide
+For all options run pandc --help or checkout Pandoc User&amp;amp;rsquo;s Guide 
 Setup On Debian/Ubuntu based distributions install following software
 sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
 Basic To simply convert an md file run:</description>
@@ -70,7 +70,7 @@ Prerequisites  Requires OpenSSH_8.2p1 or higher for the Client and Server (out o
       <guid>https://digitalizeit.io/posts/yubicosshlogin/</guid>
       <description>Goal: Using the YubiKey for SSH login as a second factor - 2FA.
 Setup Setup a VM (for example on DigitalOcean) where you are able to login with your SSH Key.
-SSH Key Tutorial
+SSH Key Tutorial 
 Generate API key from yubico Yubico API key signup 
 Copy the Client ID and the Secret key.
 Prepare the SSH server All the following commands have to be executed/configured on the SSH Server.

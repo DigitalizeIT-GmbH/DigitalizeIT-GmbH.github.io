@@ -1,184 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://digitalizeit.io/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2022-09-02-ethereum-bootcamp4/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2022-01-04-ethereum-bootcamp3/</loc>
     <lastmod>2022-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/</loc>
     <lastmod>2021-10-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/python-flask-heroku/</loc>
     <lastmod>2021-10-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-11-19-donau-uni/</loc>
     <lastmod>2020-11-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/markdown-to-pdf/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/fido2/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/yubicosshlogin/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/gpgnotes/</loc>
     <lastmod>2020-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-08-28-ethereum-bootcamp2/</loc>
     <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/encfs/</loc>
     <lastmod>2020-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/ssss-split/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-06-05-cas-dlta/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-05-12-scbc-academy/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-05-05-bfh-wallets-seeds/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-04-06-donau-uni/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-01-30-ethereum-bootcamp1/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-01-10-prof-bitcoin/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2020-01-10-mimacom/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2019-11-21-meetup/</loc>
     <lastmod>2019-11-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2019-09-12-oekb/</loc>
     <lastmod>2019-09-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/raspberrypivpnserver/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/posts/diceware/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2018-10-10-ethereum-bootcamp-muscat/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/trainings/2018-05-10-ethereum-bootcamp-zh/</loc>
     <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/services/blockchaintrainings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/blog/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/credentials/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/services/softwareengineering/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/products/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/series/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/services/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/services/smartcontract/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/services/softwarearchitecture/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://digitalizeit.io/tags/</loc>
   </url>
-  
 </urlset>

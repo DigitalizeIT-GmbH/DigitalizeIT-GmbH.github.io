@@ -45,16 +45,10 @@ SSH Key Tutorial
 Generate API key from yubico Yubico API key signup 
 Copy the Client ID and the Secret key.
 Prepare the SSH server All the following commands have to be executed/configured on the SSH Server.
-If you are not working as root add the sudo command in front of the commands.">
-<meta itemprop="datePublished" content="2020-09-24T00:00:00+00:00" />
+If you are not working as root add the sudo command in front of the commands."><meta itemprop="datePublished" content="2020-09-24T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-09-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="322">
-<meta itemprop="image" content="https://digitalizeit.io"/>
-
-
-
+<meta itemprop="wordCount" content="322"><meta itemprop="image" content="https://digitalizeit.io"/>
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://digitalizeit.io"/>
 
@@ -78,10 +72,10 @@ Copy the Client ID and the Secret key.
 Prepare the SSH server All the following commands have to be executed/configured on the SSH Server.
 If you are not working as root add the sudo command in front of the commands." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://digitalizeit.io/posts/yubicosshlogin/" />
-<meta property="og:image" content="https://digitalizeit.io"/>
+<meta property="og:url" content="https://digitalizeit.io/posts/yubicosshlogin/" /><meta property="og:image" content="https://digitalizeit.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-09-24T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-24T00:00:00+00:00" /><meta property="og:site_name" content="DigitalizeIT GmbH" />
+
 
 
 
@@ -178,12 +172,12 @@ If you are not working as root add the sudo command in front of the commands." /
 <p>If you are not working as <code>root</code> add the <code>sudo</code> command in front of the commands.</p>
 <p>If you want to use an other user than root for the SSH login, replace root with your specific username.</p>
 <h3 id="add-required-libraries">Add required libraries</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add-apt-repository ppa:yubico/stable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add-apt-repository ppa:yubico/stable
 apt-get update
 apt-get install libpam-yubico
 </code></pre></div><h3 id="update-pam-settings">Update PAM settings</h3>
 <p>Replace <code>Client ID</code> and <code>Secret key</code> with the right values.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/pam.d/sshd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/pam.d/sshd
 
 <span style="color:#75715e"># Add in the first line</span>
 auth required pam_yubico.so id<span style="color:#f92672">=[</span>Client ID<span style="color:#f92672">]</span> key<span style="color:#f92672">=[</span>Secret key<span style="color:#f92672">]</span> debug authfile<span style="color:#f92672">=</span>/etc/yubikey_mappings mode<span style="color:#f92672">=</span>client
@@ -192,13 +186,13 @@ auth required pam_yubico.so id<span style="color:#f92672">=[</span>Client ID<spa
 @include common-auth
 </code></pre></div><p>Get the YubkKey OTP password. To receive the OTP password simple touch the YubiKey while an editor or the terminal is active. It will print out a set of characters. Copy the first twelve characters.</p>
 <p>Create a new File <code>/etc/yubikey_mappings</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/yubikey_mappings
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/yubikey_mappings
 
 <span style="color:#75715e"># Adding the user and the first 12 characters of the  Yubikey OTP</span>
 root:<span style="color:#f92672">[</span><span style="color:#ae81ff">12</span> first OTP characters<span style="color:#f92672">]</span>
 user1:<span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 </code></pre></div><h3 id="enable-authenticate-publickey-and-pam">Enable authenticate publickey and pam</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /etc/ssh/sshd_config
 
 <span style="color:#75715e"># Enable or add following setting</span>
 ChallengeResponseAuthentication yes
@@ -206,10 +200,10 @@ AuthenticationMethods publickey,keyboard-interactive:pam
 UsePAM yes
 </code></pre></div><h3 id="restart-sshd">Restart sshd</h3>
 <p>Make sure do not logout of your ssh session. If the configuration is wrong or something failed you might not be able to login with SSH again.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service sshd restart
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service sshd restart
 </code></pre></div><h2 id="testing">Testing</h2>
 <p>On the client try to login to the SSH server.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Optional parameter: -v. Verbose option. Helpful for debugging</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Optional parameter: -v. Verbose option. Helpful for debugging</span>
 
 ssh root@my-server
 Enter passphrase <span style="color:#66d9ef">for</span> key <span style="color:#e6db74">&#39;/home/user/.ssh/id_rsa&#39;</span>: 
@@ -254,21 +248,7 @@ YubiKey <span style="color:#66d9ef">for</span> <span style="color:#e6db74">`</sp
 
 
 
-<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-151915982-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.a0f363fdf81cdc5cfacc447a79c33189eb000d090336cd04aac8ee256f423b3133b836c281944c19c75e38d0b0b449f01ce5807e37798b7ac94ac1db51983fc4.js" integrity="sha512-oPNj/fgc3Fz6zER6ecMxiesADQkDNs0EqsjuJW9COzEzuDbCgZRMGcdeONCwtEnwHOWAfjd5i3rJSsHbUZg/xA=="></script>
 
 
 

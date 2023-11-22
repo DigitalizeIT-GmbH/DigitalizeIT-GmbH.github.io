@@ -45,16 +45,10 @@ Pandoc is a very powerful tool and can convert almost any document format to ano
 For all options run pandc --help or checkout Pandoc User&amp;rsquo;s Guide 
 Setup On Debian/Ubuntu based distributions install following software
 sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
-Basic To simply convert an md file run:">
-<meta itemprop="datePublished" content="2020-11-04T00:00:00+00:00" />
+Basic To simply convert an md file run:"><meta itemprop="datePublished" content="2020-11-04T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-11-04T00:00:00+00:00" />
-<meta itemprop="wordCount" content="427">
-<meta itemprop="image" content="https://digitalizeit.io"/>
-
-
-
+<meta itemprop="wordCount" content="427"><meta itemprop="image" content="https://digitalizeit.io"/>
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://digitalizeit.io"/>
 
@@ -78,10 +72,10 @@ Setup On Debian/Ubuntu based distributions install following software
 sudo apt-get install pandoc sudo apt-get install texlive-latex-base If there should be missing software search in google for it.
 Basic To simply convert an md file run:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://digitalizeit.io/posts/markdown-to-pdf/" />
-<meta property="og:image" content="https://digitalizeit.io"/>
+<meta property="og:url" content="https://digitalizeit.io/posts/markdown-to-pdf/" /><meta property="og:image" content="https://digitalizeit.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-11-04T00:00:00+00:00" /><meta property="og:site_name" content="DigitalizeIT GmbH" />
+
 
 
 
@@ -171,16 +165,16 @@ format.</p>
   </a></p>
 <h2 id="setup">Setup</h2>
 <p>On Debian/Ubuntu based distributions install following software</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install pandoc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install pandoc
 sudo apt-get install texlive-latex-base
 </code></pre></div><p>If there should be missing software search in google for it.</p>
 <h2 id="basic">Basic</h2>
 <p>To simply convert an <code>md</code> file run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf
 </code></pre></div><h2 id="advanced">Advanced</h2>
 <p>To generate a more beautiful presentation add metadata.</p>
 <p>This can be done in the <code>md</code> file itself with a yaml block at the beginning</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---
 title:
 - Mardown to Presentation
 author:
@@ -188,42 +182,42 @@ author:
 theme:
 - Copenhagen
 ---
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf
 </code></pre></div><p>List with all <a href="https://deic-web.uab.cat/~iblanes/beamer_gallery/index_by_theme_and_color.html" target="_blank">
     themes
   </a></p>
 <h2 id="using-a-template-file">Using a template file</h2>
 <p>Modify the <code>md</code> with specific pandoc metadata is not always what you want. We can put all these metadata to a template file. E.g. <code>template.yaml</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml
 </code></pre></div><h2 id="code-block-highlighting">Code block highlighting</h2>
 <p>There are several code highlighting styles available:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc --list-highlight-styles
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc --list-highlight-styles
 </code></pre></div><p>An example by using the <code>zenbrun</code> style</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t beamer -o presentation.pdf <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
 </code></pre></div><h2 id="generate-other-document-types">Generate other document types</h2>
 <p>There are almost 50 output formats available. To list them:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc --list-output-formats
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc --list-output-formats
 </code></pre></div><p>Be aware that every generator has it&rsquo;s own options. For example the <code>theme</code> option in the <code>template.yaml</code> is only available in the <code>beamer</code> generator.</p>
 <h2 id="generate-a-pdf-document">Generate a PDF document</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t latex -o presentation.pdf <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t latex -o presentation.pdf <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn -V geometry:a4paper
 </code></pre></div><h2 id="generate-html">Generate HTML</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t html5 -o presentation.html <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t html5 -o presentation.html <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
 </code></pre></div><p>If you analyze the generated HTML code all HTML tags have specific <code>class</code> attributes. So it&rsquo;s straight forward to generate a custom <code>css</code>.</p>
 <h2 id="generate-microsoft-office-documents">Generate Microsoft Office documents</h2>
 <p>Unfortunately <code>docx</code> and <code>pptx</code> have no templates available.</p>
 <h3 id="generate-a-powerpoint">Generate a PowerPoint</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t pptx -o presentation.pptx <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t pptx -o presentation.pptx <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
 </code></pre></div><h3 id="generate-a-word-document">Generate a word document</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t docx -o presentation.docx <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pandoc README.md -t docx -o presentation.docx <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --metadata-file<span style="color:#f92672">=</span>template.yaml <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --highlight-style<span style="color:#f92672">=</span>zenburn
 </code></pre></div><h2 id="conclusion">Conclusion</h2>
@@ -267,21 +261,7 @@ theme:
 
 
 
-<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-151915982-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+<script type="text/javascript" src="/bundle.min.a0f363fdf81cdc5cfacc447a79c33189eb000d090336cd04aac8ee256f423b3133b836c281944c19c75e38d0b0b449f01ce5807e37798b7ac94ac1db51983fc4.js" integrity="sha512-oPNj/fgc3Fz6zER6ecMxiesADQkDNs0EqsjuJW9COzEzuDbCgZRMGcdeONCwtEnwHOWAfjd5i3rJSsHbUZg/xA=="></script>
 
 
 

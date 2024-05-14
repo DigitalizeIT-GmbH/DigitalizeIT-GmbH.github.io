@@ -250,24 +250,9 @@ Setup:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://digitalizeit.io/about/</guid>
-      <description>Kasimir Blaser Founder, Owner, Software Architect and Blockchain Developer.
-Enabling companies to integrate blockchain technology successful.
-Kasimir has several years professional experience in consulting and designing blockchain solutions for the industry.
-With 20 years of professional software engineering experience, Kasimir covers the DevOps lifecycle. He has implemented solutions for the telecom, finance, transport and government sector.
+      <description>Kasimir Blaser Founder, Owner, Software Architect, Software and DevOps Engineer.
+With over 20 years of professional software engineering experience, Kasimir has a broad expertise in the IT industry. He has implemented solutions for the telecom, finance, transport and government sector.
  CAS Software Architecture AWS Certified Solutions Architect - Associate Certified Bitcoin Professional (CBP) Professional Scrum Master I (PSM I) Professional Scrum Developer I (PSD I) Oracle Certified Professional, Java SE 7 Programmer Oracle Certified Associate, Java SE 7 Programmer B.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Trainings</title>
-      <link>https://digitalizeit.io/services/blockchaintrainings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://digitalizeit.io/services/blockchaintrainings/</guid>
-      <description>Our trainings includes blockchain introduction, business use-case evaluation and smart contract developer courses.
-Introduction courses:
- History of money and what is value Bitcoin whitepaper study Blockchain fundamental techniques Wallet and private key handling  Business courses:
- Differences between public and private blockchains (public and private blockchains ) Smart contract overview Blockchain industry use-cases analysis Private blockchain governance Limitations and possibilities  Ethereum Developer courses:
- Ethereum and smart contract fundamentals Solidity programming language Develop, test and deploy smart contracts DApp development (frontend + smart contract)  </description>
     </item>
     
     <item>
@@ -278,37 +263,6 @@ Introduction courses:
       <guid>https://digitalizeit.io/credentials/</guid>
       <description>Testimonials  DigitalizeIT&amp;rsquo;s Ethereum Bootcamp provides a great opportunity to get on speed fast. In only a short amount of time Kasimir not only showed us the basics, but let us deploy our first Smart Contracts and gave us all the needed tools and examples to start building professional Smart Contracts as well. I can recommend Kasimir&amp;rsquo;s Bootcamps with great confidence.
  Roland Ringgenberg / Digital Architect Web 3.0 / Hedera Hashgraph MVP Ambassador.</description>
-    </item>
-    
-    <item>
-      <title>Java Software Engineering</title>
-      <link>https://digitalizeit.io/services/softwareengineering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://digitalizeit.io/services/softwareengineering/</guid>
-      <description>We have 20+ years of professional software engineering experience. We have implemented solutions for the telecom, finance, transport and government sector.
- Professional expertise in Java Expertise in Python, JavaScript, Bash and more SQL and NoSQL experience We support you with full stack hands on power Building monitoring services  We are certified as “Oracle Certified Professional, Java SE 7 Programmer” as well as “Scrum Master” and “Scrum Developer”.</description>
-    </item>
-    
-    <item>
-      <title>Smart Contract Development</title>
-      <link>https://digitalizeit.io/services/smartcontract/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://digitalizeit.io/services/smartcontract/</guid>
-      <description>Development of customized Ethereum smart contracts and DApps (decentralized applications).
-We have three years of experience in Ethereum smart contract development. We delivered various customer projects especial in the field of tokenization. We developed ERC20 / fungible and ERC721 / non-fungible-tokens and decentralized exchange smart contracts. Furthermore we delivered for our customers customized private permissioned Ethereum networks.
-We provide customized smart contracts and frontend development for our customers. We offer services to support the customer&amp;rsquo;s development team during the blockchain implementation phase.</description>
-    </item>
-    
-    <item>
-      <title>Software Architecture</title>
-      <link>https://digitalizeit.io/services/softwarearchitecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://digitalizeit.io/services/softwarearchitecture/</guid>
-      <description>We design the overall software architecture based on the requirements and the customers expectation. Taking into account the functional and nonfunctional requirements and have in mind the whole DevOps lifecycle.
- We are doing software architecture and integration architecture. Based on your idea and business case, we design the software architecture. Focusing on cloud and serverless infrastructure. Focusing on automation, scaling and security best practices.  </description>
     </item>
     
   </channel>

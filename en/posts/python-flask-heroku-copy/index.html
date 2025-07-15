@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Python Flask Heroku Demo Demonstration of Python with Flask (REST API) and a deployment to Heroku
+Goals:
+Create a simple REST application On the local machine we want that the API /greeting returns &amp;ldquo;Hello World from localhost&amp;rdquo; Deployment to Heroku On the Heroku deployment we want that the API /greeting returns &amp;ldquo;Hello World from Heroku&amp;rdquo; Dependencies pip install flask pip install python-dotenv # For Heroku pip install gunicorn # Save dependencies to requirements." />
+<meta name="keywords" content="homepage, blog" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/en/posts/python-flask-heroku-copy/" />
+
+
+    <title>
+        
+            Python Flask Heroku Demo :: DigitalizeIT GmbH  — Transform your vision into reality with our expert IT solutions. 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.b1fb78ae06da75890d2caea9cc8522d849a6b78db1ac1168b7cf07352cb2e7f2.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Python Flask Heroku Demo">
+<meta itemprop="description" content="Python Flask Heroku Demo Demonstration of Python with Flask (REST API) and a deployment to Heroku
+Goals:
+Create a simple REST application On the local machine we want that the API /greeting returns &ldquo;Hello World from localhost&rdquo; Deployment to Heroku On the Heroku deployment we want that the API /greeting returns &ldquo;Hello World from Heroku&rdquo; Dependencies pip install flask pip install python-dotenv # For Heroku pip install gunicorn # Save dependencies to requirements."><meta itemprop="datePublished" content="2021-10-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-10-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="238"><meta itemprop="image" content="http://localhost:1313/" />
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/" /><meta name="twitter:title" content="Python Flask Heroku Demo"/>
+<meta name="twitter:description" content="Python Flask Heroku Demo Demonstration of Python with Flask (REST API) and a deployment to Heroku
+Goals:
+Create a simple REST application On the local machine we want that the API /greeting returns &ldquo;Hello World from localhost&rdquo; Deployment to Heroku On the Heroku deployment we want that the API /greeting returns &ldquo;Hello World from Heroku&rdquo; Dependencies pip install flask pip install python-dotenv # For Heroku pip install gunicorn # Save dependencies to requirements."/>
+
+
+
+    <meta property="og:title" content="Python Flask Heroku Demo" />
+<meta property="og:description" content="Python Flask Heroku Demo Demonstration of Python with Flask (REST API) and a deployment to Heroku
+Goals:
+Create a simple REST application On the local machine we want that the API /greeting returns &ldquo;Hello World from localhost&rdquo; Deployment to Heroku On the Heroku deployment we want that the API /greeting returns &ldquo;Hello World from Heroku&rdquo; Dependencies pip install flask pip install python-dotenv # For Heroku pip install gunicorn # Save dependencies to requirements." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/en/posts/python-flask-heroku-copy/" /><meta property="og:image" content="http://localhost:1313/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-21T00:00:00+00:00" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-10-21 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Home:</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#a9a9b3;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right" style="white-space: nowrap;">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://localhost:1313/en/services">Services</a></li><li><a href="http://localhost:1313/en/trainings/">Trainings</a></li><li><a href="http://localhost:1313/en/about/">About</a></li><li><a href="http://localhost:1313/en/posts/">Blog</a></li><li><a href="http://localhost:1313/en/credentials/">Credentials</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+            <span >
+
+<ul class="menu__inner">
+
+
+</ul></span>
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+        <h1>Python Flask Heroku Demo</h1>
+        
+        <article>
+            
+
+            
+
+            
+
+            <div class="post-content">
+                <h2 id="python-flask-heroku-demo">Python Flask Heroku Demo</h2>
+<p>Demonstration of Python with Flask (REST API) and a deployment to Heroku</p>
+<p>Goals:</p>
+<ul>
+<li>Create a simple REST application</li>
+<li>On the local machine we want that the API <code>/greeting</code> returns &ldquo;Hello World from localhost&rdquo;</li>
+<li>Deployment to Heroku</li>
+<li>On the Heroku deployment we want that the API <code>/greeting</code> returns &ldquo;Hello World from Heroku&rdquo;</li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip  install flask
+</span></span><span style="display:flex;"><span>pip install python-dotenv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># For Heroku</span>
+</span></span><span style="display:flex;"><span>pip install gunicorn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save dependencies to requirements.txt</span>
+</span></span><span style="display:flex;"><span>python3 -m pip freeze &gt; requirements.txt
+</span></span></code></pre></div><h3 id="python-flask-project">Python Flask project</h3>
+<p>File: app.py</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> Flask
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#f92672">=</span> Flask(__name__)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#34;/greeting&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greeting</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MESSAGE&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">.</span>run(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.0.0.0&#39;</span>, port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>)
+</span></span></code></pre></div><p>File: .env</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MESSAGE<span style="color:#f92672">=</span>Hello World from localhost
+</span></span></code></pre></div><p>Run the application</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 app.py
+</span></span></code></pre></div><p>Validate the response</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://127.0.0.1:8080/greeting
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Should print: Message: Hello World from localhost</span>
+</span></span></code></pre></div><h3 id="git">Git</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>File .gitignore</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>venv
+</span></span><span style="display:flex;"><span>.git
+</span></span><span style="display:flex;"><span>__pycache__
+</span></span><span style="display:flex;"><span>.idea
+</span></span></code></pre></div><p>Commit the files to git. And after checkout to the master branch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b master
+</span></span></code></pre></div><h3 id="heroku-deployment">Heroku Deployment</h3>
+<ul>
+<li>Create a Heroku account</li>
+<li>Install Heroku CLI</li>
+</ul>
+<p>File: Procfile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>web: gunicorn app:app
+</span></span></code></pre></div><p>Create the Heroku application</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>heroku create
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Returns</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt; Creating app... done, ⬢ murmuring-plains-11587</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt; https://murmuring-plains-11587.herokuapp.com/ | https://git.heroku.com/murmuring-plains-11587.git</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git push heroku master
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># After the git push Heroku should build and start the application</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Show the logs</span>
+</span></span><span style="display:flex;"><span>heroku logs --tail
+</span></span></code></pre></div><h4 id="set-the-environment-variable">Set the environment variable</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>heroku config:set MESSAGE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World from Heroku&#34;</span> -a murmuring-plains-11587
+</span></span></code></pre></div><h4 id="validate-the-deployment">Validate the deployment</h4>
+<p>Validate the response</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://murmuring-plains-11587.herokuapp.com/greeting
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Should print: Message: Hello World from Heroku</span>
+</span></span></code></pre></div>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div >
+            <span>DigitalizeIT GmbH</span><br />
+            <span>Längenrüppstrasse 15, 3322 Urtenen-Schönbühl, CH</span><br />
+            <a href = "mailto: info@digitalizeIT.io">info@digitalizeIT.io</a><br />
+            <a href="tel:&#43;41%2078%20811%2003%2033">&#43;41 78 811 03 33</a>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.26db4c0c4875d30c5b87dfe5d4e6dca835010a2e05640cb5c1bb9d17dd28dfd6ccb26f0ac0bf28ddffef647cdf7e6c284d2218821385b442df1d1034f3e49061.js" integrity="sha512-JttMDEh10wxbh9/l1ObcqDUBCi4FZAy1wbudF90o39bMsm8KwL8o3f/vZHzffmwoTSIYghOFtELfHRA08&#43;SQYQ=="></script>
+
+
+
+    </body>
+</html>

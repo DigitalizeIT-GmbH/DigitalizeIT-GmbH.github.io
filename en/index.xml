@@ -7,8 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>DigitalizeIT GmbH</copyright>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://digitalizeit.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ETF-Compare.com</title>
+      <link>https://digitalizeit.io/en/posts/etf-compare/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://digitalizeit.io/en/posts/etf-compare/</guid>
+      <description>ETF-Compare.com Your starting point for comparing ETFs. Our service allows you to easily compare two or more ETFs side by side, providing essential information to help you make informed investment decisions. For detailed insights, each ETF comparison includes direct links to their specific fact sheets. Start your comparison today and simplify your ETF selection process with ETF-Compare.com.&#xA;Links:&#xA;ETF-compare.com Demo Video </description>
+    </item>
+    <item>
+      <title>OpenMarket NFT marketplace</title>
+      <link>https://digitalizeit.io/en/posts/openmarket/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://digitalizeit.io/en/posts/openmarket/</guid>
+      <description>OpenMarket OpenMarket is an NFT marketplace. OpenMarket is built on three main modules:&#xA;Frontend: User can browse, filter, buy, and sell NFTs. Backend: Indexing NFTs and the corresponding metadata. Keep track of the order book. Provides APIs for the frontend. Smart-Contract / DEX: Buy trades relay only on blockchain technology. By buying NFTs the user directly interacts over a P2P network with the smart contract without a centralized party.&#xA;Further Links</description>
+    </item>
     <item>
       <title>Ethereum Developer Bootcamp - Smart Contracts and DApp Development</title>
       <link>https://digitalizeit.io/en/trainings/2022-09-02-ethereum-bootcamp4/</link>

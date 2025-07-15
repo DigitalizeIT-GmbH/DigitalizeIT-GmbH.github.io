@@ -6,8 +6,63 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>DigitalizeIT GmbH</copyright>
-        <lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://digitalizeit.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>ETF-Compare.com</title>
+            <link>https://digitalizeit.io/en/posts/etf-compare/</link>
+            <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://digitalizeit.io/en/posts/etf-compare/</guid>
+            <description>ETF-Compare.com Your starting point for comparing ETFs. Our service allows you to easily compare two or more ETFs side by side, providing essential information to help you make informed investment decisions. For detailed insights, each ETF comparison includes direct links to their specific fact sheets. Start your comparison today and simplify your ETF selection process with ETF-Compare.com.
+Links:
+ETF-compare.com Demo Video </description>
+            <content type="html"><![CDATA[<h2 id="etf-comparecom">ETF-Compare.com</h2>
+<p>Your starting point for comparing ETFs. Our service allows you to easily compare two or more ETFs side by side, providing essential information to help you make informed investment decisions. For detailed insights, each ETF comparison includes direct links to their specific fact sheets. Start your comparison today and simplify your ETF selection process with ETF-Compare.com.</p>
+<p>Links:</p>
+<ul>
+<li><a href="https://etf-compare.com/" target="_blank">
+    ETF-compare.com
+  </a></li>
+<li><a href="https://www.youtube.com/watch?v=tWCtkCbEKoo" target="_blank">
+    Demo Video
+  </a></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>OpenMarket NFT marketplace</title>
+            <link>https://digitalizeit.io/en/posts/openmarket/</link>
+            <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://digitalizeit.io/en/posts/openmarket/</guid>
+            <description>OpenMarket OpenMarket is an NFT marketplace. OpenMarket is built on three main modules:
+Frontend: User can browse, filter, buy, and sell NFTs. Backend: Indexing NFTs and the corresponding metadata. Keep track of the order book. Provides APIs for the frontend. Smart-Contract / DEX: Buy trades relay only on blockchain technology. By buying NFTs the user directly interacts over a P2P network with the smart contract without a centralized party.
+Further Links</description>
+            <content type="html"><![CDATA[<h2 id="openmarket">OpenMarket</h2>
+<p>OpenMarket is an NFT marketplace. OpenMarket is built on three main modules:</p>
+<ul>
+<li>Frontend: User can browse, filter, buy, and sell NFTs.</li>
+<li>Backend: Indexing NFTs and the corresponding metadata. Keep track of the order book. Provides APIs for the frontend.</li>
+<li>Smart-Contract / DEX: Buy trades relay only on blockchain technology.</li>
+</ul>
+<p>By buying NFTs the user directly interacts over a P2P network with the smart contract without a centralized party.</p>
+<p>Further Links</p>
+<ul>
+<li><a href="https://openmarket-documentation.readthedocs.io/en/latest/" target="_blank">
+    Documentation
+  </a></li>
+<li><a href="https://www.youtube.com/watch?v=5qGZbw8eVx4" target="_blank">
+    Youtube Video 1
+  </a></li>
+<li><a href="https://www.youtube.com/watch?v=95xP5CCgGkQ" target="_blank">
+    Youtube Video 2
+  </a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Python Flask Heroku Demo</title>

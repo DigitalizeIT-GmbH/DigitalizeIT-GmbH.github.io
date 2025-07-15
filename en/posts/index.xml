@@ -6,13 +6,51 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>DigitalizeIT GmbH</copyright>
-        <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 19 Mar 2025 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://digitalizeit.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Tunnelbauer - VPN Manager</title>
+            <link>https://digitalizeit.io/en/posts/tunnelbauer/</link>
+            <pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate>
+            
+            <guid>https://digitalizeit.io/en/posts/tunnelbauer/</guid>
+            <description>Tunnelbauer Tunnelbauer VPN is a powerful VPN management tool designed for efficient VPN server and client fleet management.
+Tunnelbauer ensures secure and efficient VPN management, enabling businesses and individuals to have full control over their VPN infrastructure.
+Manage VPN Servers: Add or remove VPN Servers across the globe. Control VPN Clients: Add or remove VPN clients. Including devices running on Windows, Linux, MacOS and mobile platforms. Have full control over the VPN infrastructure.</description>
+            <content type="html"><![CDATA[<h2 id="tunnelbauer">Tunnelbauer</h2>
+<p>Tunnelbauer VPN is a powerful VPN management tool designed for efficient VPN server and client fleet management.</p>
+<p>Tunnelbauer ensures secure and efficient VPN management, enabling businesses and individuals to have full control over their VPN infrastructure.</p>
+<ul>
+<li>Manage VPN Servers: Add or remove VPN Servers across the globe.</li>
+<li>Control VPN Clients: Add or remove VPN clients. Including devices running on Windows, Linux, MacOS and mobile platforms.</li>
+<li>Have full control over the VPN infrastructure. Runs on various PaaS providers or on-prem.</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Centralized Management: Manage multiple VPN servers and clients from a single interface.</li>
+<li>Client Cross-Platform Compatibility: Supports Linux, Mac, Windows and mobile clients.</li>
+<li>Scalability: Easily add or remove VPN servers and clients as needed.</li>
+<li>Security: Ensure secure connections across all devices with State-of-the-Art Cryptography.</li>
+<li>Speed: Optimized for fast connections and minimal delays, ensuring a seamless experience.</li>
+<li>Low Latency: Designed to minimize latency, providing users with quick, reliable access to networks.</li>
+<li>Minimal Resources: Efficient VPN protocol. Runs on IoT devices as well</li>
+</ul>
+<h2 id="benefits">Benefits</h2>
+<ul>
+<li>Full control: You own and control the infrastructure where the VPN Servers are running.</li>
+<li>Don’t share with thousands other users.</li>
+<li>Low latency and super fast. Users don’t realise that they&rsquo;re using a VPN.</li>
+<li>Stable and secure connections. Modern cryptography.</li>
+<li>Scales on your needs.</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>ETF-Compare.com</title>
             <link>https://digitalizeit.io/en/posts/etf-compare/</link>
-            <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+            <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
             
             <guid>https://digitalizeit.io/en/posts/etf-compare/</guid>
             <description>ETF-Compare.com Your starting point for comparing ETFs. Our service allows you to easily compare two or more ETFs side by side, providing essential information to help you make informed investment decisions. For detailed insights, each ETF comparison includes direct links to their specific fact sheets. Start your comparison today and simplify your ETF selection process with ETF-Compare.com.

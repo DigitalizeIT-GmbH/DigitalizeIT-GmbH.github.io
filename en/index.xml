@@ -7,12 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>DigitalizeIT GmbH</copyright>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://digitalizeit.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tunnelbauer - VPN Manager</title>
+      <link>https://digitalizeit.io/en/posts/tunnelbauer/</link>
+      <pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://digitalizeit.io/en/posts/tunnelbauer/</guid>
+      <description>Tunnelbauer Tunnelbauer VPN is a powerful VPN management tool designed for efficient VPN server and client fleet management.&#xA;Tunnelbauer ensures secure and efficient VPN management, enabling businesses and individuals to have full control over their VPN infrastructure.&#xA;Manage VPN Servers: Add or remove VPN Servers across the globe. Control VPN Clients: Add or remove VPN clients. Including devices running on Windows, Linux, MacOS and mobile platforms. Have full control over the VPN infrastructure.</description>
+    </item>
     <item>
       <title>ETF-Compare.com</title>
       <link>https://digitalizeit.io/en/posts/etf-compare/</link>
-      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
       <guid>https://digitalizeit.io/en/posts/etf-compare/</guid>
       <description>ETF-Compare.com Your starting point for comparing ETFs. Our service allows you to easily compare two or more ETFs side by side, providing essential information to help you make informed investment decisions. For detailed insights, each ETF comparison includes direct links to their specific fact sheets. Start your comparison today and simplify your ETF selection process with ETF-Compare.com.&#xA;Links:&#xA;ETF-compare.com Demo Video </description>
     </item>
